@@ -256,6 +256,13 @@ module Rapa
         end
       end
 
+      # @return [Rapa::Price, nil]
+      def price_offer
+        if price_source = source.dig("Offers", "Offer", "OfferListing", "Price")
+          ::Rapa::Price.new(price_source)
+        end
+      end
+
       # @return [String, nil]
       def product_group
         source.dig("ItemAttributes", "ProductGroup")

@@ -148,6 +148,7 @@ Available methods:
 - `#price_lowest_collectible`
 - `#price_lowest_new`
 - `#price_lowest_used`
+- `#price_offer`
 - `#product_group`
 - `#product_type_name`
 - `#publication_date`

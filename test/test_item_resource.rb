@@ -238,6 +238,18 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "#price_offer" do
+    let(:subject) do
+      item_resource.price_offer
+    end
+
+    it "returns a Rapa::Price" do
+      assert do
+        subject.is_a?(::Rapa::Price)
+      end
+    end
+  end
+
   describe "#publication_date" do
     let(:subject) do
       item_resource.publication_date
